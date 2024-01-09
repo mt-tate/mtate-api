@@ -3,12 +3,12 @@ version: '3'
 # どんなコンテナを立ち上げるか
 services:
  # laravelを動かすコンテナ
- app:
+ api:
    # どのポートを開いて繋ぐか。下記はコンテナの80番ポートを開いて、ホストの8000番につなぐ
    ports:
      - "8000:80"
    # 先ほど作ったDockerfileを使って、コンテナをビルドするという指定
-   build: ./app
+   build: ./api
    # コンテナの名前を指定
    container_name: mtate_api
    # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
